@@ -22,7 +22,7 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayTemperature(response) {
+function showTemp(response) {
   console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
@@ -49,7 +49,7 @@ function displayTemperature(response) {
 function search(city) {
   let apiKey = "b95e4d9ece25e5d23a804d0d19379e1f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayTemperature);
+  axios.get(apiUrl).then(showTemp);
 }
 
 function handleSubmit(event) {
@@ -58,7 +58,7 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-function displayfahrenheitTemperature(event) {
+function showFahTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   celsiusLink.classList.remove("active");
@@ -67,7 +67,7 @@ function displayfahrenheitTemperature(event) {
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-function displayCelsiusTemperature(event) {
+function showCelTemp(event) {
   event.preventDefault();
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
@@ -81,9 +81,9 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayfahrenheitTemperature);
+fahrenheitLink.addEventListener("click", showFahTemp);
 
 let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
+celsiusLink.addEventListener("click", showCelTemp);
 
 search("Rome");

@@ -42,15 +42,13 @@ function showForecastHour(response) {
   let addHtml = `<div class="row cur-day">`;
   let hours = response.data.hourly;
   hours.forEach(function (hourForecast, index) {
-    if (index < 5) {
+    if (index < 7) {
       addHtml =
         addHtml +
         ` <div class="col text-center">
-                <p class="hour">${formatHour(hourForecast.dt)}</p>
+                <p class="hour">${formatHour(hourForecast.dt)}:00</p>
                 <img
-                  src="http://openweathermap.org/img/wn/${
-                    hourForecast.weather[0].icon
-                  }@2x.png"
+                  src="./img/${hourForecast.weather[0].icon}.svg"
                   alt="weater"
                   width="50px"
                   class="day-sign"
@@ -96,9 +94,7 @@ function showForecastDays(response) {
         `<div class="col text-center">
                 <p class="day">${formatDay(dayForecast.dt)}</p>
                 <img
-                  src="http://openweathermap.org/img/wn/${
-                    dayForecast.weather[0].icon
-                  }@2x.png"
+                  src="./img/${dayForecast.weather[0].icon}.svg"
                   alt="weater"
                   width="50px"
                   class="day-sign"
@@ -136,10 +132,7 @@ function showTemp(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
+  iconElement.setAttribute("src", `./img/${response.data.weather[0].icon}.svg`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
   callForecastDays(response.data.coord);

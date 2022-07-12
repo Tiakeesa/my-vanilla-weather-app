@@ -1,3 +1,44 @@
+#search-form {
+  width: 340px;
+  display: inline-block;
+  background: rgba(5, 4, 4, 0.2);
+  border-radius: 60px;
+  border: black;
+  backdrop-filter: blur(4px) saturate(180%);
+}
+
+#search-form button {
+  width: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: rgba(8, 7, 7, 0.737);
+}
+
+#search-form input {
+  background: transparent;
+  border: black;
+  outline: black;
+  padding: 8px 30px 8px 5px;
+  font-size: 16px;
+  color: rgb(10, 9, 9);
+}
+
+.wrapper-b .but .iput-btn {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 40px;
+}
+
+.wrapper-b .but .iput-btn i {
+  font-size: 25px;
+  line-height: 40px;
+}
+
 h1 {
   color: #878787;
   font-size: 24px;

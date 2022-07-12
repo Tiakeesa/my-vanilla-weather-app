@@ -10,6 +10,7 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <script src="https://kit.fontawesome.com/9424b4c5b7.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
@@ -18,27 +19,25 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-          <form id="search-form" class="mb-3">
+          <form id="search-form">
             <div class="row">
-              <div class="col-10">
+                <div class="col-10">
                 <input
                   type="search"
                   placeholder="Type a city.."
-                  class="form-control"
                   id="city-input"
                   autocomplete="off"
                 />
+                    <button type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>         
               </div>
-              <div class="col-2">
-                <input
-                  type="submit"
-                  value="search"
-                  class="btn btn-primary w-100"
-                />
               </div>
-            </div>
-          </form>
-          <div class="overview">
+          </form><div class="wrapper-b"><div class="but"><button class="iput-btn" id="btn-current"><i class="fa-solid fa-location-pin"></i></button>
+           </div>
+           </div>
+          
+                        <div class="overview">
             <h1 id="city"></h1>
             <ul>
               <li>Last updated <span id="date"></span></li>

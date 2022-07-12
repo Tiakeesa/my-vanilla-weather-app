@@ -10,7 +10,10 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-    <script src="https://kit.fontawesome.com/9424b4c5b7.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/9424b4c5b7.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
@@ -21,23 +24,28 @@
         <div class="weather-app">
           <form id="search-form">
             <div class="row">
-                <div class="col-10">
+              <div class="col-10">
                 <input
                   type="search"
                   placeholder="Type a city.."
                   id="city-input"
                   autocomplete="off"
                 />
-                    <button type="submit">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>         
+                <button type="submit">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
               </div>
-              </div>
-          </form><div class="wrapper-b"><div class="but"><button class="iput-btn" id="btn-current"><i class="fa-solid fa-location-pin"></i></button>
-           </div>
-           </div>
-          
-                        <div class="overview">
+            </div>
+          </form>
+          <div class="wrapper-b">
+            <div class="but">
+              <button class="iput-btn" id="btn-current">
+                <i class="fa-solid fa-location-pin"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="overview">
             <h1 id="city"></h1>
             <ul>
               <li>Last updated <span id="date"></span></li>
@@ -66,20 +74,24 @@
             </div>
             <br />
 
-            <div class="hourly" id="hourly"> </div>
-<br>
+            <div class="hourly" id="hourly"></div>
+            <br />
             <strong>5-DAY FORECAST</strong>
-                
-            <div class= "weekly" id ="weekly"></div> 
-            </div>
 
-        <small>
+            <div class="weekly" id="weekly"></div>
+          </div>
+        </div>
+
+        <div class="wrapper-g">
           <a
+            class="button"
             href="https://github.com/Tiakeesa/my-vanilla-weather-app"
             target="_blank"
-            >Open-source code</a
-          >, by Monica
-        </small>
+            style="color: black; text-decoration: none"
+            ><div class="icon"><i class="fa-brands fa-github"></i></div>
+            <span>Github</span>
+          </a>
+        </div>
       </div>
     </div>
     <script src="src/index.js"></script>
